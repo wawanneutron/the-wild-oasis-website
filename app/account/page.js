@@ -1,9 +1,11 @@
-import CardHeader from '../components/CardHeader'
+export const metadata = {
+  title: 'Guest Account'
+}
 
-export default function Home() {
+export default function Page() {
   return (
-    <div className="h-svh">
-      <CardHeader>Account</CardHeader>
-    </div>
+    <h2 className="font-semibold text-2xl text-accent-400 mb-7">
+      Wellcome, Adilla MF
+    </h2>
   )
 }
