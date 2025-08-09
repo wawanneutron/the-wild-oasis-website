@@ -3,7 +3,6 @@ import CabinCard from './CabinCard'
 
 async function CabinList() {
   const cabins = await getCabins()
-  console.log(cabins)
 
   if (!cabins.length) return null
 
