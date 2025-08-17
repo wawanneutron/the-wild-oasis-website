@@ -11,8 +11,6 @@ function Filter() {
   const handleFilter = (capacity) => {
     const params = new URLSearchParams(searchParams.toString())
 
-    console.log(pathName)
-
     params.set('capacity', capacity)
     router.replace(`${pathName}?${params.toString()}`, { scroll: false })
   }
