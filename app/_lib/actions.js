@@ -19,9 +19,10 @@ export const updateGuest = async (formData) => {
   if (!/^[a-zA-Z0-9]{6,12}$/.test(nationalID))
     throw new Error('Please provide a valid national ID')
 
-  const updateData = { nationalID, nationality, countryFlag }
+  if (!nationality || !countryFlag)
+    throw new Error('Please provide a valid nationalitu dan country flag.')
 
-  console.log('serveraction update guest', updateData)
+  const updateData = { nationalID, nationality, countryFlag }
 
   const { data, error } = await supabase
     .from('guests')
@@ -30,7 +31,10 @@ export const updateGuest = async (formData) => {
     .select()
     .single()
 
-  if (error) throw new Error('Guest could not be updated')
+  if (error) {
+    console.error('Supabase error:', error)
+    throw new Error('Guest could not be updated')
+  }
 
   revalidatePath('/account/profile')
 }

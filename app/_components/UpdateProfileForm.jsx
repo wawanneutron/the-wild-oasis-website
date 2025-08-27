@@ -32,9 +32,7 @@ function UpdateProfileForm({ children, guest }) {
       <div className="space-y-2">
         <div className="flex items-center justify-between">
           <label htmlFor="nationality">Where are you from?</label>
-          <Image
-            width={28}
-            height={20}
+          <img
             src={guest.countryFlag}
             alt="Country flag"
             className="h-5 rounded-sm"
