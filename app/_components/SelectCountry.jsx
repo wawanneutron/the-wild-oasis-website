@@ -1,7 +1,7 @@
 // Let's imagine your colleague already built this component 😃
 
 async function SelectCountry({ defaultCountry, name, id, className }) {
-  const res = await fetch(`${process.env.BASE_URL}/api/countries`)
+  const res = await fetch(`${process.env.NEXTAUTH_URL}/api/countries`)
   const countries = await res.json()
 
   const flag =
