@@ -2,7 +2,7 @@ name: Supabase Keep Alive
 
 on:
   schedule:
-    - cron: '*/15 * * * *' # tiap 15 menit
+    - cron: '0 0,12 * * *' # tiap 2x sehari
   workflow_dispatch: # kalau mau manual run
 
 jobs:
