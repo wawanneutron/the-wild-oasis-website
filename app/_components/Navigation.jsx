@@ -34,7 +34,7 @@ export default async function Navigation() {
               <Image
                 width={38}
                 height={38}
-                src={session.user.image}
+                src={session.user?.image}
                 alt={session.user.name}
                 referrerPolicy="no-referrer"
                 className="rounded-full"
