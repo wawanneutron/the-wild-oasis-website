@@ -2,7 +2,7 @@ name: Supabase Keep Alive - The Wild Oasis
 
 on:
   schedule:
-    - cron: '0 0,12 * * *' # tiap 2x sehari
+    - cron: '0 0,12 * * *' # tiap 2x sehari 00:00 UTC (07:00 WIB) - 12:00 UTC (19:00 WIB)
   workflow_dispatch: # kalau mau manual run
 
 jobs:
